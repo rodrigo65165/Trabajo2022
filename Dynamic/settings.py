@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-7dtdu$plv!1-=z9yrb2^v0v7)&t#%iu+q3cu0oe+h!6f+gch^q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
     
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*", 'web-production-b46b.up.railway.app']
 
 
 
@@ -86,8 +86,12 @@ WSGI_APPLICATION = 'Dynamic.wsgi.application'
 
 DATABASES = {
     'default': {
-       'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3', 
+       'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'HGgp4E7ah4Cj6tAjsxOg',
+        'HOST': 'containers-us-west-141.railway.app',
+        'PORT': '7035',
     }
 }
 
@@ -133,4 +137,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
