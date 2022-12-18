@@ -1,1 +1,1 @@
-web: gunicorn Trabajo_Final.wsgi --log-file -
+web: gunicorn Dynamic.wsgi --log-file -
