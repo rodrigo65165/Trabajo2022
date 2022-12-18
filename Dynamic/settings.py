@@ -82,9 +82,12 @@ WSGI_APPLICATION = 'Dynamic.wsgi.application'
 
 DATABASES = {
     'default': {
-       'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-        
+       'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': '3h2FqM1YdtdqWXryramc',
+        'HOST': 'containers-us-west-64.railway.app',
+        'PORT': '6400',
     }
 }
 
@@ -126,8 +129,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'core')
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
