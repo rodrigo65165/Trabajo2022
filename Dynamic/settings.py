@@ -28,7 +28,7 @@ DEBUG = True
     
 ALLOWED_HOSTS = ["*",'web-production-5f3f.up.railway.app']
 
-
+CSRF_FAILURE_VIEW = ['web-production-5f3f.up.railway.app']
 
 
 
